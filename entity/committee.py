@@ -28,7 +28,7 @@ class Committee:
         return True
 
     def delete(self):
-        sql = "DELETE FROM user WHERE committeeID = ?"
+        sql = "DELETE FROM committee WHERE committeeID = ?"
         con = db.connect("database\\login.db")
         cur = con.cursor()
         cur.execute(sql, (self.committeeid,))
@@ -38,7 +38,7 @@ class Committee:
         return True
 
     def update(self):
-        sql = "UPDATE user SET committeeName = ? WHERE committeeID = ?"
+        sql = "UPDATE committee SET committeeName = ? WHERE committeeID = ?"
         con = db.connect("database\\login.db")
         cur = con.cursor()
         cur.execute(sql, (self.committeename, self.committeeid))
