@@ -7,6 +7,7 @@ def create_table() :
     con.commit()
     cur.close()
     con.close()
+
 def create_house():
     pass
 def update_house():
@@ -41,5 +42,17 @@ def menu():
 create_table()
 menu()
 
+
+
+def insertHouse(houseID, houseName):
+    oUser = House()
+    oUser.houseid = houseID
+    oUser.housename = houseName
+    oUser.save()
+
+    houseID = input("Enter your house id: ")
+    houseName = input("Enter your house name: ")
+    insertHouse(houseID, houseName)
+    print("House added successfully")
 
 
