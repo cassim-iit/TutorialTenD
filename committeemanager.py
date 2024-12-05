@@ -3,7 +3,7 @@ from entity.committee import Committee
 
 
 def initializeDatabase():
-    sql = "CREATE TABLE IF NOT EXISTS committee(commetteeID INT PRIMARY KEY, committeeName  TEXT )"
+    sql = "CREATE TABLE IF NOT EXISTS committee(committeeID INT PRIMARY KEY, committeeName  TEXT )"
     con = db.connect("database\\committee.db")
     cur = con.cursor()
     cur.execute(sql)
