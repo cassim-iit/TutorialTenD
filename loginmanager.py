@@ -44,7 +44,6 @@ def getAllUsers():
     cur = con.cursor()
     cur.execute(sql)
     rows = cur.fetchall()
-    con.commit()
     cur.close()
     con.close()
     for row in rows:
