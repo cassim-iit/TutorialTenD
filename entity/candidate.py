@@ -11,3 +11,5 @@ class Candidate:
         print(f"Name     : {candidate.candidateName}")
         print(f"Age      : {candidate.candidateAge}")
         print(f"Gender   : {candidate.gender}")
+
+
