@@ -2,11 +2,11 @@
 https://www.sqlitetutorial.net/sqlite-create-table/
 """
 import sqlite3 as db
-from entity.user import User
+#from entity.user import User
 
 
 def initializeDatabase():
-    sql = "CREATE TABLE IF NOT EXISTS user(commettee TEXT PRIMARY KEY, id  INT)"
+    sql = "CREATE TABLE IF NOT EXISTS committee(commettee TEXT PRIMARY KEY, id  INT)"
     con = db.connect("database\\committee.db")
     cur = con.cursor()
     cur.execute(sql)
@@ -14,6 +14,9 @@ def initializeDatabase():
     cur.close()
     con.close()
 
+initializeDatabase()
+
+'''
 def insertUser(userName, passWord):
     oUser = User()
     oUser.username = userName
@@ -88,7 +91,7 @@ def menu():
 #main for this module
 initializeDatabase()
 menu()
-
+'''
 
 
 
