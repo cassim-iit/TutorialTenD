@@ -17,3 +17,8 @@ def insertUser(candidateID, candidateName,candidateAge,gender):
     oUser.candidateName = candidateName
     oUser.gender = gender
     oUser.save()
+
+def removeUser(userName):
+    oUser = candidate()
+    oUser.candidateName = userName
+    oUser.delete()
