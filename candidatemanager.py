@@ -1,4 +1,6 @@
 import sqlite3
+import entity.candidate
+
 def create_table() :
     sql = "CREATE TABLE IF NOT EXISTS candidate(candidateID TEXT NOT NULL UNIQUE PRIMARY KEY, candidateName TEXT NOT NULL, candidateAge INT NOT NULL, gender TEXT NOT NULL)"
     con = sqlite3.connect('database\\candidates.db')
