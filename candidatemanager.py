@@ -1,16 +1,13 @@
 import sqlite3
+import entity.candidate
+
 def create_table() :
+    sql = "CREATE TABLE IF NOT EXISTS candidate(candidateID TEXT NOT NULL UNIQUE PRIMARY KEY, candidateName TEXT NOT NULL, candidateAge INT NOT NULL, gender TEXT NOT NULL)"
     con = sqlite3.connect('database\\candidates.db')
     cur = con.cursor()
-    cur.execute("CREATE TABLE IF NOT EXISTS candidate(candidateID TEXT NOT NULL UNIQUE PRIMARY KEY, candidateName TEXT NOT NULL, candidateAge INT NOT NULL, gender TEXT NOT NULL)")
+    cur.execute(sql)
     con.commit()
     con.close()
 
 create_table()
 
-class Candidate:
-    def __init__(self, candidateID, candidateName, candidateAge, gender):
-        self.candidateID = candidateID
-        self.candidateName = candidateName
-        self.candidateAge = candidateAge
-        self.gender = gender
