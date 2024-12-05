@@ -14,3 +14,15 @@ class Committee:
         con.commit()
         cur.close()
         con.close()
+
+    def load(self):
+        sql = "SELECT committee,id FROM committee WHERE committee = ?"
+        con = db.connect("database\\committee.db")
+        cur = con.cursor()
+        cur.execute(sql, (self.committee,))
+        row = cur.fetchone()
+        cur.close()
+        con.close()
+        self.committee = row[0]
+        self.id = row[1]
+        return True
