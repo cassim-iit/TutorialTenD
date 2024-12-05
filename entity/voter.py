@@ -7,4 +7,3 @@ class voter:
         self.district = district
         self.name = name
         self.iitnumber = iitnumber
-
