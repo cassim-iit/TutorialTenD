@@ -7,7 +7,7 @@ class Committee:
         self.committeename = committee_name
 
     def save(self):
-        sql = "INSERT INTO committee (committeeID, committeeName) VALUES (?, ?)"
+        sql = "INSERT INTO committeee (committeeID, committeeName) VALUES (?, ?)"
         con = db.connect("database\\committee.db")
         cur = con.cursor()
         cur.execute(sql, (self.committeeid, self.committeename))
@@ -16,7 +16,7 @@ class Committee:
         con.close()
 
     def load(self):
-        sql = "SELECT committeeID,committeeName FROM committee WHERE committeeName = ?"
+        sql = "SELECT committeeID,committeeName FROM committeee WHERE committeeName = ?"
         con = db.connect("database\\committee.db")
         cur = con.cursor()
         cur.execute(sql, (self.committeename,))
@@ -28,7 +28,7 @@ class Committee:
         return True
 
     def delete(self):
-        sql = "DELETE FROM committee WHERE committeeID = ?"
+        sql = "DELETE FROM committeee WHERE committeeID = ?"
         con = db.connect("database\\login.db")
         cur = con.cursor()
         cur.execute(sql, (self.committeeid,))
@@ -38,7 +38,7 @@ class Committee:
         return True
 
     def update(self):
-        sql = "UPDATE committee SET committeeName = ? WHERE committeeID = ?"
+        sql = "UPDATE committeee SET committeeName = ? WHERE committeeID = ?"
         con = db.connect("database\\login.db")
         cur = con.cursor()
         cur.execute(sql, (self.committeename, self.committeeid))
