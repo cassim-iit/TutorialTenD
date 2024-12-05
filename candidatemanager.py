@@ -22,3 +22,5 @@ def removeUser(userName):
     oUser = candidate()
     oUser.candidateName = userName
     oUser.delete()
+
+    #ADAREI HAMOTAMA UMMA KATE
