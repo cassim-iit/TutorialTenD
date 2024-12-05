@@ -10,7 +10,7 @@ class voter:
 
     def update_table(self):
         sql = "UPDATE user SET name = ?, district = ?, nic = ?, age = ?  WHERE iitnumber = ?"
-        con = db.connect("database\\login.db")
+        con = db.connect("database\\voter.db")
         cur = con.cursor()
         cur.execute(sql, (self.name, self.district, self.nic, self.age))
         con.commit()
