@@ -12,7 +12,7 @@ def create_table() :
 create_table()
 
 def insertUser(candidateID, candidateName,candidateAge,gender):
-    oUser = User()
+    oUser =  User()
     oUser.candidateID = candidateID
     oUser.candidateName = candidateName
     oUser.gender = gender
