@@ -8,6 +8,16 @@ class voter:
         self.name = name
         self.iitnumber = iitnumber
 
+    def update_table(self):
+        sql = "UPDATE user SET name = ?, district = ?, nic = ?, age = ?  WHERE iitnumber = ?"
+        con = db.connect("database\\login.db")
+        cur = con.cursor()
+        cur.execute(sql, (self.name, self.district, self.nic, self.age))
+        con.commit()
+        cur.close()
+        con.close()
+        return True
+
     def save(self):
         sql = "INSERT INTO voter (age, nic, district, name, iitnumber) VALUES (?, ?)"
         con = db.connect("database\\login.db")
