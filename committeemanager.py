@@ -6,7 +6,7 @@ from entity.committee import Committee
 
 
 def initializeDatabase():
-    sql = "CREATE TABLE IF NOT EXISTS committee(commettee TEXT PRIMARY KEY, id  INT)"
+    sql = "CREATE TABLE IF NOT EXISTS committee(commetteeName TEXT PRIMARY KEY, iD  INT)"
     con = db.connect("database\\committee.db")
     cur = con.cursor()
     cur.execute(sql)
@@ -16,13 +16,13 @@ def initializeDatabase():
 
 initializeDatabase()
 
-'''
-def insertUser(userName, passWord):
-    oUser = User()
-    oUser.username = userName
-    oUser.password = passWord
-    oUser.save()
 
+def insertCommittee(committeeName, iD):
+    oCommittee = Committee()
+    oCommitteee.committee = committeeName
+    oCommittee.id = iD
+    oCommittee.save()
+'''
 def removeUser(userName):
     oUser = User()
     oUser.username = userName
