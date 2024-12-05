@@ -7,3 +7,9 @@ def create_table() :
     con.close()
 
 create_table()
+
+class Candidate:
+    def __init__(self, candidateName, candidateAge, gender):
+        self.candidateName = candidateName
+        self.candidateAge = candidateAge
+        self.gender = gender
