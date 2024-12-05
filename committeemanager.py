@@ -2,7 +2,7 @@
 https://www.sqlitetutorial.net/sqlite-create-table/
 """
 import sqlite3 as db
-#from entity.user import User
+from entity.committee import Committee
 
 
 def initializeDatabase():
