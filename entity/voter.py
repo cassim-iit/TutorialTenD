@@ -16,4 +16,3 @@ class voter:
         con.commit()
         cur.close()
         con.close()
-        return True
